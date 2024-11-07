@@ -1,0 +1,14 @@
+#Ganzzahl
+
+X_Versatz
+Y_Versatz
+
+#Länge
+
+F_2D_B
+F_2D_H
+
+F_2D_X01 = if(X_Versatz > 0, F_2D_B * X_Versatz, 0 mm)
+F_2D_X02 = if(X_Versatz = 0, F_2D_B, if(X_Versatz < 0, F_2D_B * abs(X_Versatz), 0 mm))
+F_2D_X03 = if(X_Versatz = 0, F_2D_B, 0 mm)
+F_2D_Y01 = if(Y_Versatz = 0, 0 mm, if(Y_Versatz > 0, F_2D_H * abs(Y_Versatz), 0 mm))
